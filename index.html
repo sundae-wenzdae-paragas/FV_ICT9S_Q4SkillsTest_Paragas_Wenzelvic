@@ -4,20 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q4 Skillstest</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <style>
-        .body{
-            background-color:bisque;
+        body{
+            background-image:url(https://www.shutterstock.com/shutterstock/videos/1050472477/thumb/1.jpg?ip=x480);
+            background-repeat:no-repeat;
+            background-size:cover;
+        } 
+        .container{
+            justify-content:center;
+            background-color:rgb(219, 17, 148, 0.2);
+            border-radius:10px;
+        }
+
+        .container2{
+            justify-content:center;
+            background-color:rgba(129, 9, 166, 0.5);
+            border-radius:10px;
+        }
+
+        .container3{
+            background-color:rgba(236, 192, 62, 0.5);
+            justify-content:center;
+            border:6px solid rgb(83, 49, 5);
+        }
+
+        .container4{
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-color:rgb(219, 17, 148, 0.2);
         }
     </style>
 </head>
 <body>
-
-
+    <br>
+    <div class="container2 text-white text-center"><h4><strong>
     <script>
+        document.write("Fill the login form below to confirm your membership! 📝")
+    </script></strong></h4></div>
 
-    </script>
+    <br>
+    <div class="container text-center">
+        <br>
+        <h1><kbd><strong>Login</strong></kbd></h1>
+        <p class="fw-bold" ontoggle="">Chat with your bestfriends and explore memes together. Login to Chat Memes now! </p>  
+    <h4><kbd class="text-info"><strong>Username:</strong></kbd></h4>
+    <input type="text" id="LoginInput1" class="form-control text-center" placeholder="type here..." style="border-radius:10px;">    
+    <br>
+    <h4><kbd class="text-info"><strong>Password:</strong></kbd></h4>
+    <input type="text" id="LoginInput2" class="form-control text-center" placeholder="type here..." style="border-radius:10px;"> 
+
+    <details ontoggle="message()">
+        <summary>
+            <u><h3>instructions</h3></u>
+            <br>
+            <p id="display" class="text-light"></p>
+        </summary>
+    </details>
+<script>
+    function message(){
+            document.getElementById('display').innerHTML = "<span style='font-size: 28px;'>Enter Starboy99 and the secret password to enter.</span>";   }         
+</script>
+
+    <button class="btn btn-info" id="loginBTN" onclick="LoginInput()">Button </button>
+    <br>
+    <br>
+    <img src="https://i.programmerhumor.io/2026/01/bcc6eff5f96e2ee7347597b79b1c5bb834c3b485dc79e7272b0d29c41726bf18.png" style="height:500px; width:auto;">
     
+</div>
+    </div>
+    <br>
+<script>
+        window.alert("Welcome back starboy99! Your password is Another.")
+        
+        let attempt_counter = 0;
+
+        function LoginInput() {
+    
+        
+        let username = document.getElementById("LoginInput1").value;
+        let pwd = document.getElementById("LoginInput2").value;
+    
+        let display = document.getElementById("display");
+        let loginBtn = document.getElementById("loginBTN");
+
+        if (username === "Starboy99" && pwd === "Another") {
+            alert("Welcome" + username + "!");
+            attempt_counter = 0; 
+            display.innerHTML = "";
+            window.location.href = "dashboard.html";
+            alert("Thanks for loging in!!!🕊️");
+    } 
+        else {
+            // 3. Handle incorrect login
+            attempt_counter++;
+        
+        if (attempt_counter >= 3) {
+            display.innerHTML = "Access denied. Account locked!";
+            alert("Access denied. Account locked after 3 attempts!");
+            loginBtn.disabled = true; // Lock the button
+
+
+        for (let x = 0; x < 8; x++) {
+        username += "The number is " + x + "<br>";
+}
+
+        } else {
+            display.innerHTML = "Incorrect username and/or password. Attempt " + attempt_counter + " of 3";
+        }
+    }
+    }
+</script>
+
+
+
+
+  <br>
+<div class="container3"><br>
+<h2 class="text-center">
+    Sources:
+</h2>
+<ul class="list-unstyled text-center">
+         <li><a href="https://programmerhumor.io/security-memes/starboy-98-5a2j" target="_blank" class="text-info"><strong>Programmer Humor</strong></a></li></ul>
+</div><br>
+
 </body>
 </html>
